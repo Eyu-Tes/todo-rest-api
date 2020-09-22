@@ -39,7 +39,8 @@ DEFAULT_APPS = [
 ]
 
 LOCAL_APPS = [
-    'api.apps.ApiConfig'
+    'api.apps.ApiConfig',
+    'frontend.apps.FrontendConfig'
 ]
 
 THIRD_PARTY_APPS = [
