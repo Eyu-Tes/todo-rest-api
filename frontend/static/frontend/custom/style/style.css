@@ -1,12 +1,61 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../font/Montserrat/Montserrat-Regular.ttf');
+}
+
 :root {
-    --font-primary: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    --font-primary: Montserrat, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body{
     font-family: var(--font-primary);
+    background: rgb(54,217,182);
+	background: linear-gradient(90deg, rgba(54,217,182,1) 0%, rgba(32,152,126,1) 43%, rgba(0,212,255,1) 100%);
 }
 
 input, button, select {
     box-shadow: none !important;
     outline: none !important;
+}
+
+#task-container{
+    max-width:600px;
+    margin:100px auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: #fff;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#form-wrapper{
+    position: sticky;
+    top: 0rem;
+    border-bottom: 1px solid  #e9e9e9;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    background-color: #fff;
+    padding:40px;
+}
+
+input[type=submit]{
+    background-color: #36d9b6;
+    border-radius: 0;
+    border:0;
+    color: #fff;
+}
+
+.flex-wrapper{
+    display: flex;
+}
+
+.task-wrapper{
+    margin:5px;
+    padding: 5px;
+    padding:20px;
+    cursor: pointer;
+    border-bottom: 1px solid  #e9e9e9;
+    color: #686868;
+}
+
+.striked {
+    text-decoration: line-through;
 }

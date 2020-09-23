@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Todo REST - API</title>
+    <title>Todo</title>
     <!-- Font Awesome, Bootstrap -->
     <link rel="stylesheet" href="{% static 'frontend/font awsome/css/all.min.css' %}">
     <link rel="stylesheet" href="{% static 'frontend/bootstrap-4.4.1-dist/css/bootstrap.min.css' %}">
@@ -12,7 +12,27 @@
     <link rel="stylesheet" href="{% static 'frontend/custom/style/style.css' %}">
 </head>
 <body>
-    <h3>Hello</h3>
+    <div class="container">
+		<div id="task-container">
+			<div id="form-wrapper">
+				<form id="form" method="post">
+                    {% csrf_token %}
+					<div class="flex-wrapper">
+						<div style="flex: 6">
+							<input id="title" class="form-control" type="text" name="title" placeholder="Add task">
+						</div>
+						<div style="flex: 1" class="ml-1">
+							<input class="btn" type="submit" >
+						</div>
+					</div>
+				</form>
+			</div>
+			<div id="list-wrapper">
+			
+			</div>	
+		</div>
+
+	</div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- the slim build of jQuery excludes the ajax and effects modules -->
@@ -20,6 +40,9 @@
     <script src="{% static 'frontend/popper.min.js' %}"></script>
     <script src="{% static 'frontend/bootstrap-4.4.1-dist/js/bootstrap.min.js' %}"></script>
     <!-- Custom JS -->
-    <script src="{% static 'frontend/custom/script/script.js' %}"></script>
+    <!-- “Uncaught SyntaxError: Cannot use import statement outside a module”  -->
+    <script src="{% static 'frontend/custom/script/script.js' %}" type="module"></script>
+
+    
 </body>
 </html>
